@@ -45,6 +45,6 @@ def test_game():
     else:
         print(f"\nGAME OVER! Winner is {game.winner.name}!")
 
-# if __name__ == "__main__":
-test_game()
+if __name__ == "__main__":
+    test_game()
 

@@ -16,9 +16,11 @@ class RowWinningStrategy(WinningStrategy):
     def checkWinner(self,board:Board,player:Player)->bool:
 
         for i in range(board.size):
-            if board.getCell(i,0).symbol==player.symbol and board.getCell(i,1).symbol==player.symbol and board.getCell(i,2).symbol==player.symbol:
+            if all(board.getCell(i,j).symbol==player.symbol for j in range(board.size)):
                 return True
+        
         return False
+        
 
     
     
@@ -27,8 +29,9 @@ class ColWinnnigStrategy(WinningStrategy):
     def checkWinner(self,board:Board,player:Player)->bool:
 
         for i in range(board.size):
-            if board.getCell(0,i).symbol==player.symbol and board.getCell(1,i).symbol==player.symbol and board.getCell(2,i).symbol==player.symbol:
+            if all(board.getCell(j,i).symbol==player.symbol for j in range(board.size)):
                 return True
+        
         return False
 class DiagonalWinningStrategy(WinningStrategy):
     

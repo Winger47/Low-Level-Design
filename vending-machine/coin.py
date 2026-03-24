@@ -6,3 +6,6 @@ class Coin(Enum):
     DIME    = 10
     QUARTER = 25
 
+    def get_value(self):
+        return self.value
+

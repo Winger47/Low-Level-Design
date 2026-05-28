@@ -9,6 +9,7 @@ class Card:
         self.account=account
         self.pin=pin
         self.status=CardStatus.ACTIVE
+        self.failed_pin_attempts = 0
 
     def verify_pin(self,input_pin:str)->bool:
         return self.pin==input_pin      

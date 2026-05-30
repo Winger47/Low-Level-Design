@@ -11,4 +11,3 @@ class Player:
         self.position = new_position        
     def __repr__(self):
         return f"<Player name={self.name} position={self.position}>"    
-    

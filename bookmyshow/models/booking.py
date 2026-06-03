@@ -1,6 +1,4 @@
 
-
-
 from enums import booking_status
 from datetime import datetime
 from models.show import Show

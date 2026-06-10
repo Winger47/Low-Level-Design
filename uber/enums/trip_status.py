@@ -1,0 +1,10 @@
+from enum import Enum
+
+
+class TripStatus(Enum):
+    REQUESTED="REQUESTED"
+    ACCEPTED="ACCEPTED"
+    ONGOING="ONGOING"
+    COMPLETED="COMPLETED"
+    CANCELLED="CANCELLED"
+

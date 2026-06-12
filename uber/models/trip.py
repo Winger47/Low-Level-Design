@@ -5,13 +5,17 @@ from models.location import Location
 from models.driver import Driver
 from enums import TripStatus
 import random
+from datetime import datetime
 class Trip:
     def __init__(self,trip_id:int,rider:Rider,pickup_location:Location,dropoff_location:Location):
         self.trip_id=trip_id
         self.rider=rider
         self.pickup_location=pickup_location
         self.dropoff_location=dropoff_location
-    
+        self.requested_at = datetime.now() 
+
+
+
         self.status=TripStatus.REQUESTED
         self.driver=None
         self.fare=0.0
